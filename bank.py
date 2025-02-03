@@ -1,14 +1,18 @@
-def main():
-    # Prompt for greeting input
-    greeting = input("Enter a greeting: ").strip().lower()
-
-    # Check the greeting's condition
+def value(greeting):
+    # Convert the greeting to lowercase for case-insensitivity
+    greeting = greeting.lower().strip()
     if greeting.startswith("hello"):
-        print("$0")
+        return 0
     elif greeting.startswith("h"):
-        print("$20")
+        return 20
     else:
-        print("$100")
+        return 100
 
-# Call the main function to run the program
-main()
+def main():
+    greeting = input("Enter a greeting: ").strip()
+    result = value(greeting)
+    print(f"{result}")
+
+if __name__ == "__main__":
+    main()
+
